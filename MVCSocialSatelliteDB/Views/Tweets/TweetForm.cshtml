@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "TweetForm";
+}
+
+    @*@("Create", "Tweet", "Tweets")*@
+    <div class="Row ">
+        <div class=" col-md-6">
+            <div>
+                <h4>Please Enter Your Tweet Here</h4>
+            </div>
+            <div class="form-group">
+
+
+                @using (Html.BeginForm("Create", "Tweets"))
+                {@Html.AntiForgeryToken()
+
+                <input type="text" name="text" />
+                <input type="submit" />
+
+            }
+                <p>Tweet</p>
+                <form action="/action_page.php">
+                    Please Enter Your Tweet Here: <input type="text" name="usrname" maxlength="280"><br>
+                    <input type="submit" value="Submit">
+                </form>
+
+                @*@using (Html.BeginForm("Create", "Tweets"))
+        {
+            <input type="text" name="text" />
+            <input type="submit" />
+
+        }
+        <p>Tweet</p>
+        <form action="/action_page.php">
+            Please Enter Your Tweet Here: <input type="text" name="usrname" maxlength="280"><br>
+            <input type="submit" value="Submit">
+        </form>*@
+
+
+
+
+
+
+            </div>
+            </div>
+    </div>
+   
+
+
+<button type="button">
+    @Html.ActionLink("Home", "Index", "Home")
+</button>
+
+

@@ -1,0 +1,42 @@
+﻿@model MVCSocialSatelliteDB.Models.Tweet
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tweet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPosted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsPosted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.URL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.URL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeToPost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeToPost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TweetID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

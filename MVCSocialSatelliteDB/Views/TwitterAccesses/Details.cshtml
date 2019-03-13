@@ -1,0 +1,50 @@
+﻿@model MVCSocialSatelliteDB.Models.TwitterAccess
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TwitterAccess</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessToken)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccessToken)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessTokenSecret)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccessTokenSecret)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConsumerKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConsumerKey)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProfileID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

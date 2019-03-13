@@ -1,0 +1,49 @@
+﻿@model MVCSocialSatelliteDB.Models.PostTweets
+
+<h3>@ViewBag.Title</h3>
+
+@using (Html.BeginForm("Index", "Home"))
+{
+    <div class="Row ">
+        <div class=" col-md-6">
+            <div>
+                <h2>Welcome to Social Media Satelite</h2>
+            </div>
+            <div class="form-group">
+
+                <label>Email:</label>
+                @Html.TextBoxFor(model => model.Email, new { @class = "control-label" })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+
+                <div class="form-group">
+                    <label>Password:</label>
+                    @Html.TextBoxFor(model => model.Password, new { @class = "control-label" })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+                    <input type="submit" value="Login">
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+}
+
+
+<button type="button">
+    @Html.ActionLink("Create", "TweetForm", "Tweets")
+</button>
+<button type="button">
+    @Html.ActionLink("Delay", "Delay", "Tweets")
+</button>
+
+
+
+
+
